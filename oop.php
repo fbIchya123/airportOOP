@@ -41,18 +41,18 @@ class Airport{
     public $migg;
 
     public function __construct($airport_name, Plane $plane){
-        $this->airport_name = $airport_name;
-        $this->tu = new TU_154("Таня", 355);
-        $this->migg = $plane;
+        $this->airport_name = $airport_name; 
+        $this->tu = new TU_154("Таня", 355); //Композиция
+        $this->migg = $plane; //Агрегация
     }
 
     public function setPlane(){
-        $this->migg->landing();
+        $this->migg->landing(); //Использование агрегации
         echo $this->migg->name . " принят в аэропорту " . $this->name . "<br>";
     }
 
     public function flewAway(){
-        $this->tu->takeoff();
+        $this->tu->takeoff();   //Исползование композиции 
         echo $this->tu->name . " вылетел из аэропорта<br>";
     }
 
