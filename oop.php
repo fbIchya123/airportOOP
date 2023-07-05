@@ -81,7 +81,7 @@ $migg->takeoff();
 $migg->getStatus();
 
 $sher = new Airport('Sheremetevo', $migg);
-echo $sher->tu->getStatus();
+$sher->tu->getStatus();
 
 $sher->setPlane();
 $sher->flewAway();
